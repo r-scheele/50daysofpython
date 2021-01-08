@@ -1,12 +1,12 @@
 height = float(input('Enter your heigth in meters: '))
 weight = float(input('Enter your weigth in kg: '))
 
-bmi = weight / height ** 2
+bmi = round(weight / height ** 2)
 
 result = ''
 bmiStr = str(bmi)
-if bmi <= 18:
-    result += 'Your bmi is '+ bmiStr + ', Your slightly under weight'
+if bmi <= 18.5:
+    result += f'Your bmi is '+ bmiStr + ', Your slightly under weight'
     print(result)
 elif 18 < bmi <= 25:
     result += 'Your bmi is '+ bmiStr + ', You have a normal weight'
