@@ -55,6 +55,7 @@ while not end_of_game:
         lives += 1
 
     if lives == 6:
+        print(f"The correct is {chosen_word}")
         print('You lose!!!')
         break
 

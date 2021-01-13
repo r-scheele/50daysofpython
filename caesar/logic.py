@@ -1,6 +1,9 @@
 
 alphabet = ['1','2','3','4','5','6','7','8','9','0','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+
+
+
 #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
 def caesar(start_text, shift_amount, cipher_direction):
 
@@ -14,6 +17,10 @@ def caesar(start_text, shift_amount, cipher_direction):
             if char in alphabet:
                 
                 position = alphabet.index(char)
+                
+                err = position + shift_amount
+                if alphabet[err] == 'v' or alphabet[err] == 'w' or alphabet[err] == 'x' or alphabet[err] == 'y' or alphabet[err] == 'z':
+                    shift_amount = 1
                 if cipher_direction == 'encode':
                     if char == 'v' or char == 'w' or char == 'v' or char == 'x' or char == 'y' or char == 'z':
                         text += char
