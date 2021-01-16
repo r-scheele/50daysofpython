@@ -6,7 +6,5 @@ def leap_year(year):
     if(len(str(year)) != 4):
         return "Please enter correct year format"
 
-    res = "This is leap year" if (year%4 == 0 and (year%100 != 0 and year%400 != 0)) else "This is not a leap year"
+    res = True if (year%4 == 0 and (year%100 != 0 and year%400 != 0)) else False
     return res
-
-print(leap_year(2020))
