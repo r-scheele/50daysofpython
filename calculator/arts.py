@@ -16,13 +16,13 @@ logo = """
 
 """
 
-def calculation(string):
+def calculation(string, answer = ''):
     interface = """
 
      _____________________
     |  _________________  |
-    | |                 | |
-    | |_________________| |
+    | |""" + string + """            
+    | |_________________""" + answer + """
     |  ___ ___ ___   ___  |
     | | 7 | 8 | 9 | | + | |
     | |___|___|___| |___| |
@@ -35,3 +35,4 @@ def calculation(string):
     |_____________________|
 
     """
+    print(interface)
